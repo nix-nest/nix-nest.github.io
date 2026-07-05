@@ -1,64 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nestvarnost</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>nixnest</title>
 
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-        }
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-        body{
-            background:#0d1117;
-            color:white;
-            font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            height:100vh;
-            text-align:center;
-        }
+    body {
+      margin: 0;
+      font-family: Helvetica, Arial, sans-serif;
+      background: #0d1117;
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
 
-        h1{
-            font-size:4rem;
-            font-weight:700;
-            margin-bottom:20px;
-        }
+    header {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 24px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      border-bottom: 1px solid #222831;
+    }
 
-        p{
-            color:#9ca3af;
-            font-size:1.2rem;
-            margin-bottom:40px;
-        }
+    .logo {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -1px;
+    }
 
-        a{
-            color:white;
-            text-decoration:none;
-            border:1px solid white;
-            padding:14px 28px;
-            border-radius:999px;
-            transition:.2s;
-        }
+    nav a {
+      color: #b8bec8;
+      text-decoration: none;
+      margin-left: 18px;
+      font-size: 15px;
+    }
 
-        a:hover{
-            background:white;
-            color:black;
-        }
-    </style>
+    nav a:hover {
+      color: #ffffff;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 56px 24px;
+    }
+
+    .hero {
+      margin-bottom: 64px;
+    }
+
+    .hero h1 {
+      font-size: clamp(48px, 8vw, 88px);
+      line-height: 1;
+      margin: 0 0 20px;
+      letter-spacing: -4px;
+    }
+
+    .hero p {
+      max-width: 620px;
+      color: #aeb6c2;
+      font-size: 20px;
+    }
+
+    section {
+      margin-bottom: 56px;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-bottom: 18px;
+      border-bottom: 1px solid #222831;
+      padding-bottom: 10px;
+    }
+
+    .post {
+      padding: 22px 0;
+      border-bottom: 1px solid #222831;
+    }
+
+    .post h3 {
+      margin: 0 0 6px;
+      font-size: 22px;
+    }
+
+    .post p {
+      margin: 0;
+      color: #aeb6c2;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      border: 1px solid #222831;
+      border-radius: 18px;
+      padding: 22px;
+      background: #111821;
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    .card p {
+      color: #aeb6c2;
+    }
+
+    footer {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 32px 24px;
+      color: #7d8590;
+      border-top: 1px solid #222831;
+      font-size: 14px;
+    }
+
+    @media (max-width: 640px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav a {
+        margin-left: 0;
+        margin-right: 14px;
+      }
+
+      .hero h1 {
+        letter-spacing: -2px;
+      }
+    }
+  </style>
 </head>
 
 <body>
+  <header>
+    <div class="logo">nixnest</div>
 
-<div>
-    <h1>Nestvarnost</h1>
-    <p>Official website · Coming soon</p>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#blog">Blog</a>
+      <a href="#wallpapers">Wallpapers</a>
+      <a href="#about">About</a>
+      <a href="#other">Other</a>
+    </nav>
+  </header>
 
-    <a href="#">Enter</a>
-</div>
+  <main id="home">
+    <section class="hero">
+      <h1>hi</h1>
+      <p>
+        A small personal corner for thoughts, art, music, wallpapers,
+        pop culture, liminal spaces, and whatever else refuses to fit neatly.
+      </p>
+    </section>
 
+    <section id="blog">
+      <h2>Blog</h2>
+
+      <article class="post">
+        <h3>First post coming soon</h3>
+        <p>A place for life notes, essays, updates, obsessions, and little digital screams.</p>
+      </article>
+
+      <article class="post">
+        <h3>Notes from the nest</h3>
+        <p>Photography, games, music, design, internet fragments, and strange feelings.</p>
+      </article>
+    </section>
+
+    <section id="wallpapers">
+      <h2>Wallpapers</h2>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Desktop</h3>
+          <p>Wallpapers for Mac, PC, and large screens.</p>
+        </div>
+
+        <div class="card">
+          <h3>Mobile</h3>
+          <p>Phone wallpapers, lock screens, and vertical edits.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        nixnest is a personal blog and creative archive by ni — built for writing,
+        sharing visuals, collecting thoughts, and making a tiny home on the internet.
+      </p>
+    </section>
+
+    <section id="other">
+      <h2>Other</h2>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Music</h3>
+          <p>Releases, lyrics, projects, and behind-the-scenes notes.</p>
+        </div>
+
+        <div class="card">
+          <h3>Art</h3>
+          <p>Posters, renders, visual experiments, and design scraps.</p>
+        </div>
+
+        <div class="card">
+          <h3>Links</h3>
+          <p>Socials, playlists, recommendations, and things worth keeping.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 nixnest. Made with questionable sleep and good intentions.
+  </footer>
 </body>
 </html>
